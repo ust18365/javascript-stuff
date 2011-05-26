@@ -1,5 +1,6 @@
 //LimeChat script
-// example for shortening URL with bit.ly.
+// URL短縮サービス bit.ly の利用例
+// LimeChat スクリプトのサンプル「Google 検索」を元にしています。
 function tinyurl(url)
 {
   var login  = 'YOUR_LOGIN_ID'
@@ -7,7 +8,7 @@ function tinyurl(url)
   var encUrl = encodeURIComponent(url);
   var bitly  = 'http://api.bitly.com/v3/shorten?'
 
-  var query = 'longUrl='+encUrl+'&login='+login+'&apiKey='+apiKey
+  var query = bitly + 'longUrl='+encUrl+'&login='+login+'&apiKey='+apiKey
 
   var req = new ActiveXObject("Microsoft.XMLHTTP");
   req.open('get',query,false)
